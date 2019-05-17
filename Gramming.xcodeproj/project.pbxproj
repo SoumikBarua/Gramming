@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		326F90EA228CB281001A034C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F90E9228CB281001A034C /* AppDelegate.swift */; };
-		326F90EC228CB281001A034C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F90EB228CB281001A034C /* ViewController.swift */; };
 		326F90EF228CB281001A034C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326F90ED228CB281001A034C /* Main.storyboard */; };
 		326F90F1228CB282001A034C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326F90F0228CB282001A034C /* Assets.xcassets */; };
 		326F90F4228CB282001A034C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326F90F2228CB282001A034C /* LaunchScreen.storyboard */; };
 		326F90FC228CBA32001A034C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 326F90FB228CBA32001A034C /* GoogleService-Info.plist */; };
+		326F9101228F2270001A034C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F9100228F2270001A034C /* SignInViewController.swift */; };
 		9E94431ACD69298DECE07047 /* Pods_Gramming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A30329ABFC6496DFB1B78BE /* Pods_Gramming.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +20,12 @@
 		02BF510BCBFC1D9FC0DAAC63 /* Pods-Gramming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gramming.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gramming/Pods-Gramming.release.xcconfig"; sourceTree = "<group>"; };
 		326F90E6228CB281001A034C /* Gramming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gramming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		326F90E9228CB281001A034C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		326F90EB228CB281001A034C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		326F90EE228CB281001A034C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		326F90F0228CB282001A034C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		326F90F3228CB282001A034C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		326F90F5228CB282001A034C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		326F90FB228CBA32001A034C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		326F9100228F2270001A034C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5A30329ABFC6496DFB1B78BE /* Pods_Gramming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gramming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28A4E40D795E6CAEA003C2C /* Pods-Gramming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gramming.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gramming/Pods-Gramming.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				326F90E9228CB281001A034C /* AppDelegate.swift */,
-				326F90EB228CB281001A034C /* ViewController.swift */,
+				326F90FD228F21F8001A034C /* Model */,
+				326F90FE228F2203001A034C /* View */,
+				326F90FF228F220D001A034C /* Controller */,
 				326F90ED228CB281001A034C /* Main.storyboard */,
 				326F90F0228CB282001A034C /* Assets.xcassets */,
 				326F90F2228CB282001A034C /* LaunchScreen.storyboard */,
@@ -80,6 +82,28 @@
 				326F90FB228CBA32001A034C /* GoogleService-Info.plist */,
 			);
 			path = Gramming;
+			sourceTree = "<group>";
+		};
+		326F90FD228F21F8001A034C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		326F90FE228F2203001A034C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		326F90FF228F220D001A034C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				326F9100228F2270001A034C /* SignInViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B2C7E342A01E46DC5E99ABE8 /* Pods */ = {
@@ -210,7 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				326F90EC228CB281001A034C /* ViewController.swift in Sources */,
+				326F9101228F2270001A034C /* SignInViewController.swift in Sources */,
 				326F90EA228CB281001A034C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +385,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82PESEA6HC;
 				INFOPLIST_FILE = Gramming/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sb.Gramming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -377,7 +404,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82PESEA6HC;
 				INFOPLIST_FILE = Gramming/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sb.Gramming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
