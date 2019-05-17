@@ -1,0 +1,6 @@
+framework module Pods_Gramming {
+  umbrella header "Pods-Gramming-umbrella.h"
+
+  export *
+  module * { export * }
+}
