@@ -11,13 +11,13 @@
 		326F90EF228CB281001A034C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326F90ED228CB281001A034C /* Main.storyboard */; };
 		326F90F1228CB282001A034C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326F90F0228CB282001A034C /* Assets.xcassets */; };
 		326F90F4228CB282001A034C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326F90F2228CB282001A034C /* LaunchScreen.storyboard */; };
-		326F90FC228CBA32001A034C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 326F90FB228CBA32001A034C /* GoogleService-Info.plist */; };
 		326F9101228F2270001A034C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F9100228F2270001A034C /* SignInViewController.swift */; };
 		326F9103228F5599001A034C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F9102228F5599001A034C /* SignInView.swift */; };
 		326F9106228F5695001A034C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F9105228F5695001A034C /* Constants.swift */; };
 		326F9108228F59A1001A034C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F9107228F59A1001A034C /* RoundButton.swift */; };
 		326F910A228F5BE4001A034C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F9109228F5BE4001A034C /* CustomTextField.swift */; };
 		326F910C228F5D6C001A034C /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F910B228F5D6C001A034C /* SignInButton.swift */; };
+		32A03BEA22907F360067AE64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32A03BE922907F360067AE64 /* GoogleService-Info.plist */; };
 		9E94431ACD69298DECE07047 /* Pods_Gramming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A30329ABFC6496DFB1B78BE /* Pods_Gramming.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,13 +29,13 @@
 		326F90F0228CB282001A034C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		326F90F3228CB282001A034C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		326F90F5228CB282001A034C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		326F90FB228CBA32001A034C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		326F9100228F2270001A034C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		326F9102228F5599001A034C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		326F9105228F5695001A034C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		326F9107228F59A1001A034C /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		326F9109228F5BE4001A034C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		326F910B228F5D6C001A034C /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
+		32A03BE922907F360067AE64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A30329ABFC6496DFB1B78BE /* Pods_Gramming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gramming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28A4E40D795E6CAEA003C2C /* Pods-Gramming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gramming.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gramming/Pods-Gramming.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +90,7 @@
 				326F90F0228CB282001A034C /* Assets.xcassets */,
 				326F90F2228CB282001A034C /* LaunchScreen.storyboard */,
 				326F90F5228CB282001A034C /* Info.plist */,
-				326F90FB228CBA32001A034C /* GoogleService-Info.plist */,
+				32A03BE922907F360067AE64 /* GoogleService-Info.plist */,
 			);
 			path = Gramming;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				326F90F4228CB282001A034C /* LaunchScreen.storyboard in Resources */,
-				326F90FC228CBA32001A034C /* GoogleService-Info.plist in Resources */,
+				32A03BEA22907F360067AE64 /* GoogleService-Info.plist in Resources */,
 				326F90F1228CB282001A034C /* Assets.xcassets in Resources */,
 				326F90EF228CB281001A034C /* Main.storyboard in Resources */,
 			);
@@ -419,7 +419,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82PESEA6HC;
 				INFOPLIST_FILE = Gramming/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sb.Gramming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -435,7 +438,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82PESEA6HC;
 				INFOPLIST_FILE = Gramming/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sb.Gramming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

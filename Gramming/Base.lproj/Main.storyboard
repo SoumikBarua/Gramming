@@ -68,6 +68,9 @@
                                     <constraint firstAttribute="height" constant="150" id="EY5-xK-BWT"/>
                                 </constraints>
                                 <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="fbButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6dH-wk-5dJ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Em-M8-0Gp" customClass="CustomTextField" customModule="Gramming" customModuleProvider="target">
                                 <rect key="frame" x="61" y="525" width="292" height="30"/>
