@@ -13,6 +13,9 @@ import Firebase
 
 class SignInViewController: UIViewController {
     
+    @IBOutlet var emailTextField: CustomTextField!
+    @IBOutlet var passwordTextField: CustomTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Custom
@@ -39,11 +42,30 @@ class SignInViewController: UIViewController {
     func firebaseAuth(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential, completion: {(user, error) in
             if error != nil {
-                print("Problem authenticating with Firebase - \(error)")
+                print("Problem authenticating with Firebase - \(String(describing: error))")
             } else {
                 print("Successfully authenticated with Firebase!")
             }
         })
     }
+    
+    @IBAction func signInButtonPressed(_ sender: Any) {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil {
+                    print("Email user authenticated with Firebase")
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                        if error != nil {
+                            print("Unable to authenticate with Firebae using email - \(error)")
+                        } else {
+                            print("Successfully authenticated with Firebase using email")
+                        }
+                    })
+                }
+            })
+        }
+    }
+    
     
 }
