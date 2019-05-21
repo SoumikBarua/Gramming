@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32326B0022936F610071644E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32326AFF22936F610071644E /* FeedViewController.swift */; };
 		326F90EA228CB281001A034C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F90E9228CB281001A034C /* AppDelegate.swift */; };
 		326F90EF228CB281001A034C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326F90ED228CB281001A034C /* Main.storyboard */; };
 		326F90F1228CB282001A034C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326F90F0228CB282001A034C /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		02BF510BCBFC1D9FC0DAAC63 /* Pods-Gramming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gramming.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gramming/Pods-Gramming.release.xcconfig"; sourceTree = "<group>"; };
+		32326AFF22936F610071644E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		326F90E6228CB281001A034C /* Gramming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gramming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		326F90E9228CB281001A034C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		326F90EE228CB281001A034C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				326F9100228F2270001A034C /* SignInViewController.swift */,
+				32326AFF22936F610071644E /* FeedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				326F910A228F5BE4001A034C /* CustomTextField.swift in Sources */,
 				326F9101228F2270001A034C /* SignInViewController.swift in Sources */,
 				326F90EA228CB281001A034C /* AppDelegate.swift in Sources */,
+				32326B0022936F610071644E /* FeedViewController.swift in Sources */,
 				326F9106228F5695001A034C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +425,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82PESEA6HC;
 				INFOPLIST_FILE = Gramming/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sb.Gramming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -437,7 +444,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82PESEA6HC;
 				INFOPLIST_FILE = Gramming/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sb.Gramming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
