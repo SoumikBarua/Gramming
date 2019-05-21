@@ -1,14 +1,14 @@
 //
-//  SignInView.swift
+//  CircularImageView.swift
 //  Gramming
 //
-//  Created by SB on 5/17/19.
+//  Created by SB on 5/21/19.
 //  Copyright © 2019 SB. All rights reserved.
 //
 
 import UIKit
 
-class SignInView: UIView {
+class CircularImageView: UIImageView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,6 +17,11 @@ class SignInView: UIView {
         layer.shadowOpacity = 0.8
         layer.shadowRadius = 5.0
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        layer.cornerRadius = 2.0
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        layer.cornerRadius = self.frame.width/2
     }
 }
