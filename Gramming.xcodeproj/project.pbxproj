@@ -19,6 +19,7 @@
 		326F910A228F5BE4001A034C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F9109228F5BE4001A034C /* CustomTextField.swift */; };
 		326F910C228F5D6C001A034C /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F910B228F5D6C001A034C /* SignInButton.swift */; };
 		3282E35C22948A90006FA971 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3282E35B22948A90006FA971 /* CircularImageView.swift */; };
+		3282E35E2295D937006FA971 /* FeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3282E35D2295D937006FA971 /* FeedTableCell.swift */; };
 		32A03BEA22907F360067AE64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32A03BE922907F360067AE64 /* GoogleService-Info.plist */; };
 		9E94431ACD69298DECE07047 /* Pods_Gramming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A30329ABFC6496DFB1B78BE /* Pods_Gramming.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		326F9109228F5BE4001A034C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		326F910B228F5D6C001A034C /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
 		3282E35B22948A90006FA971 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
+		3282E35D2295D937006FA971 /* FeedTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableCell.swift; sourceTree = "<group>"; };
 		32A03BE922907F360067AE64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A30329ABFC6496DFB1B78BE /* Pods_Gramming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gramming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28A4E40D795E6CAEA003C2C /* Pods-Gramming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gramming.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gramming/Pods-Gramming.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				326F9109228F5BE4001A034C /* CustomTextField.swift */,
 				326F910B228F5D6C001A034C /* SignInButton.swift */,
 				3282E35B22948A90006FA971 /* CircularImageView.swift */,
+				3282E35D2295D937006FA971 /* FeedTableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				326F90EA228CB281001A034C /* AppDelegate.swift in Sources */,
 				32326B0022936F610071644E /* FeedViewController.swift in Sources */,
 				326F9106228F5695001A034C /* Constants.swift in Sources */,
+				3282E35E2295D937006FA971 /* FeedTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
