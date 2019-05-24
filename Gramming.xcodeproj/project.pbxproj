@@ -20,6 +20,7 @@
 		326F910C228F5D6C001A034C /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F910B228F5D6C001A034C /* SignInButton.swift */; };
 		3282E35C22948A90006FA971 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3282E35B22948A90006FA971 /* CircularImageView.swift */; };
 		3282E35E2295D937006FA971 /* FeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3282E35D2295D937006FA971 /* FeedTableCell.swift */; };
+		3282E361229870DC006FA971 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3282E360229870DC006FA971 /* DataService.swift */; };
 		32A03BEA22907F360067AE64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32A03BE922907F360067AE64 /* GoogleService-Info.plist */; };
 		9E94431ACD69298DECE07047 /* Pods_Gramming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A30329ABFC6496DFB1B78BE /* Pods_Gramming.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		326F910B228F5D6C001A034C /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
 		3282E35B22948A90006FA971 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		3282E35D2295D937006FA971 /* FeedTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableCell.swift; sourceTree = "<group>"; };
+		3282E360229870DC006FA971 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		32A03BE922907F360067AE64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A30329ABFC6496DFB1B78BE /* Pods_Gramming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gramming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28A4E40D795E6CAEA003C2C /* Pods-Gramming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gramming.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gramming/Pods-Gramming.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		326F90E8228CB281001A034C /* Gramming */ = {
 			isa = PBXGroup;
 			children = (
+				3282E35F229870B6006FA971 /* Services */,
 				326F90E9228CB281001A034C /* AppDelegate.swift */,
 				326F90FD228F21F8001A034C /* Model */,
 				326F90FE228F2203001A034C /* View */,
@@ -136,6 +139,14 @@
 				326F9105228F5695001A034C /* Constants.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		3282E35F229870B6006FA971 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3282E360229870DC006FA971 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B2C7E342A01E46DC5E99ABE8 /* Pods */ = {
@@ -279,6 +290,7 @@
 				326F9103228F5599001A034C /* SignInView.swift in Sources */,
 				326F9108228F59A1001A034C /* RoundButton.swift in Sources */,
 				326F910A228F5BE4001A034C /* CustomTextField.swift in Sources */,
+				3282E361229870DC006FA971 /* DataService.swift in Sources */,
 				326F9101228F2270001A034C /* SignInViewController.swift in Sources */,
 				326F90EA228CB281001A034C /* AppDelegate.swift in Sources */,
 				32326B0022936F610071644E /* FeedViewController.swift in Sources */,
