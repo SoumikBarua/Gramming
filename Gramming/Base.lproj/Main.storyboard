@@ -211,12 +211,16 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jtq-84-0nQ">
                                         <rect key="frame" x="8" y="8" width="366" height="49"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="Vg2-PR-7HV" customClass="CircularImageView" customModule="Gramming" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="Vg2-PR-7HV" customClass="CircularImageView" customModule="Gramming" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Vg2-PR-7HV" secondAttribute="height" id="LHg-31-Imc"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="bOg-Gt-kO0" appends="YES" id="bYG-eE-RP4"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WlH-7P-4H6" customClass="CustomTextField" customModule="Gramming" customModuleProvider="target">
                                                 <rect key="frame" x="59" y="0.0" width="248" height="49"/>
@@ -295,7 +299,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="NvT-Ba-RhD"/>
                                                                     </constraints>
-                                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 </textView>
@@ -373,6 +377,7 @@
                         <viewLayoutGuide key="safeArea" id="IAV-fW-gqz"/>
                     </view>
                     <connections>
+                        <outlet property="addImageView" destination="Vg2-PR-7HV" id="fnP-t9-smJ"/>
                         <outlet property="tableView" destination="7lr-Fb-BtZ" id="7dI-Nd-Fzx"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="backToSignIn" id="H8Q-QU-m1r"/>
                     </connections>
@@ -381,6 +386,11 @@
                 <tapGestureRecognizer id="ji7-Oh-8Tp">
                     <connections>
                         <action selector="signOutButtonPressed:" destination="rTJ-iz-rcO" id="l2Y-lK-FLK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bOg-Gt-kO0">
+                    <connections>
+                        <action selector="addImageTapped:" destination="rTJ-iz-rcO" id="0Sc-tG-l40"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

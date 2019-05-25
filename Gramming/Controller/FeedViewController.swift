@@ -10,11 +10,13 @@ import UIKit
 import SwiftKeychainWrapper
 import Firebase
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var tableView: UITableView!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
+    @IBOutlet var addImageView: CircularImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         tableView.rowHeight = tableView.bounds.height * 0.65
         tableView.backgroundColor = UIColor(red: 207/255, green: 216/255, blue: 220/255, alpha: 1.0)
+        
+        // Image picker controller initialization
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         // Data service listener
         
@@ -55,6 +62,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.update(post: posts[indexPath.row])
         
         return cell
+    }
+    
+    // MARK: - UIImagePickerControllerDelegate methods
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            addImageView.image = image
+        } else {
+            print("Oh no, a valid image wasn't selected!")
+        }
+        
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func addImageTapped(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
