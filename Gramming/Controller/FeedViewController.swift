@@ -26,7 +26,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.rowHeight = tableView.bounds.height * 0.65
         tableView.backgroundColor = UIColor(red: 207/255, green: 216/255, blue: 220/255, alpha: 1.0)
         
-        //
+        // Data service listener
         
         DataService.dataService.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshotAll = snapshot.children.allObjects as? [DataSnapshot] {
@@ -51,10 +51,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let post = posts[indexPath.row]
-        print("cellForRowAt \(post.caption)")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableCell", for: indexPath) as! FeedTableCell
+        cell.update(post: posts[indexPath.row])
         
-        return tableView.dequeueReusableCell(withIdentifier: "FeedTableCell", for: indexPath) as! FeedTableCell
+        return cell
     }
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
