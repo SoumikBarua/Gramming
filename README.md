@@ -17,3 +17,4 @@ This app uses Firebase to run a social networking app.
 6. When attempting to access a child member of a parent, if the child does not exist, Firebase will automatically create it with the provided unique ID.
 7. The **updateChildValues()** method only updates the values for specified keys without overwriting other keys. On the other hand, **setValue()** will wipe out any existing key-value data and overwrite it with new ones.
 8. When using a **UITapGestureRecognizer** instance on a view object, such as a **UIImageView** instance, make sure to set it's **userInteractionEnabled** property to **true**.
+9. You can use listeners for Firebase database to detect any changes in values for a parent node.
