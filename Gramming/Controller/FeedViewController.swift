@@ -13,10 +13,11 @@ import Firebase
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var addImageView: CircularImageView!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
-    @IBOutlet var addImageView: CircularImageView!
+    static var imageCache = NSCache<NSString, UIImage>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,10 +59,20 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableCell", for: indexPath) as! FeedTableCell
-        cell.update(post: posts[indexPath.row])
+        let post = posts[indexPath.row]
         
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableCell", for: indexPath) as? FeedTableCell {
+            
+            if let image = FeedViewController.imageCache.object(forKey: post.imageURL as NSString) {
+                cell.update(post: posts[indexPath.row], image: image)
+                return cell
+            } else {
+                cell.update(post: posts[indexPath.row])
+                return cell
+            }
+        } else {
+            return FeedTableCell()
+        }
     }
     
     // MARK: - UIImagePickerControllerDelegate methods

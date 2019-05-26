@@ -18,3 +18,4 @@ This app uses Firebase to run a social networking app.
 7. The **updateChildValues()** method only updates the values for specified keys without overwriting other keys. On the other hand, **setValue()** will wipe out any existing key-value data and overwrite it with new ones.
 8. When using a **UITapGestureRecognizer** instance on a view object, such as a **UIImageView** instance, make sure to set it's **userInteractionEnabled** property to **true**.
 9. You can use listeners for Firebase database to detect any changes in values for a parent node.
+10. When not passing in a value for an argument to an instance's method, declare the value's parameter to be an optional type with nil as a default value. For example, `func update(post: Post, image? UIImage? = nil)` can be called as `someInstance.update(post: somePost)` for a cleaner look.
