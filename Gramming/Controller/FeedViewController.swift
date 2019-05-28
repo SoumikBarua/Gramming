@@ -14,10 +14,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var addImageView: CircularImageView!
+    @IBOutlet var captionTextField: CustomTextField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache = NSCache<NSString, UIImage>()
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,8 +82,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             addImageView.image = image
+            imageSelected = true
         } else {
-            print("Oh no, a valid image wasn't selected!")
+            print("A valid image wasn't selected!")
         }
         
         imagePicker.dismiss(animated: true, completion: nil)
@@ -95,5 +98,33 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         print("ID removed from keychain")
         try! Auth.auth().signOut()
         performSegue(withIdentifier: "backToSignIn", sender: nil)
+    }
+    
+    @IBAction func postButtonTapped(_ sender: Any) {
+        guard let caption = captionTextField.text, caption != "" else {
+            print("Error posting: A caption must be entered!")
+            return
+        }
+        
+        guard let image = addImageView.image, imageSelected == true else {
+            print("Error posting: An image must be selected!")
+            return
+        }
+        
+        if let imageData = image.jpegData(compressionQuality: 0.2) {
+            
+            let imageUID = UUID().uuidString
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            let imageStorageItem = DataService.dataService.REF_POST_IMAGES.child(imageUID)
+            imageStorageItem.putData(imageData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    print("Unable to upload to Firebase Storage: \(error)")
+                } else {
+                    print("Successfully uploading to Firebase Storage!")
+                }
+            }
+        }
     }
 }
