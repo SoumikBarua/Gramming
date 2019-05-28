@@ -40,10 +40,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         DataService.dataService.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshotAll = snapshot.children.allObjects as? [DataSnapshot] {
+                // Removing all posts from local array since the for loop adds all the posts from Firebase
+                // This is avoid re-adding existing posts
+                self.posts.removeAll()
                 for snap in snapshotAll {
                     print("Snap: \(snap)")
                     
-                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                    if let postDict = snap.value as? Dictionary<String, Any> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
                         self.posts.append(post)
@@ -85,6 +88,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             imageSelected = true
         } else {
             print("A valid image wasn't selected!")
+            imageSelected = false
         }
         
         imagePicker.dismiss(animated: true, completion: nil)
@@ -120,11 +124,38 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let imageStorageItem = DataService.dataService.REF_POST_IMAGES.child(imageUID)
             imageStorageItem.putData(imageData, metadata: metadata) { (metadata, error) in
                 if error != nil {
-                    print("Unable to upload to Firebase Storage: \(error)")
+                    print("Unable to upload to Firebase Storage: \(String(describing: error))")
                 } else {
-                    print("Successfully uploading to Firebase Storage!")
+                    print("Successfully uploaded to Firebase Storage!")
+                    imageStorageItem.downloadURL(completion: { (url, error) in
+                        if error != nil {
+                            print("Unable to get the download URL for uploaded image!")
+                        } else {
+                            if url != nil {
+                                if let downloadURL = url?.absoluteString {
+                                    self.postToFirebase(imageURL: downloadURL)
+                                }
+                            }
+                        }
+                    })
                 }
             }
         }
     }
+    
+    func postToFirebase(imageURL: String) {
+        let post: Dictionary<String, Any> = [
+            "caption": captionTextField.text!,
+            "imageURL": imageURL,
+            "likes": 0
+        ]
+        
+        let firebasePost = DataService.dataService.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionTextField.text = ""
+        imageSelected = false
+        addImageView.image = UIImage(named: "add-image")
+    }
+    
 }
