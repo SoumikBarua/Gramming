@@ -251,7 +251,7 @@
                                     <constraint firstItem="Jtq-84-0nQ" firstAttribute="top" secondItem="hrT-8m-Ly7" secondAttribute="top" constant="8" id="rIg-NU-VGU"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7lr-Fb-BtZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7lr-Fb-BtZ">
                                 <rect key="frame" x="0.0" y="198" width="414" height="698"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -347,6 +347,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="mrQ-6c-lC5" id="syg-s9-pN7"/>
+                                            <outlet property="heartImage" destination="HN1-CP-b9G" id="l0F-Yj-kzO"/>
                                             <outlet property="likesCountLabel" destination="dF2-S0-qzs" id="oRM-KR-Uti"/>
                                             <outlet property="postImage" destination="PuD-3m-YTW" id="Dfg-xL-ssU"/>
                                             <outlet property="profileImage" destination="kcf-g5-mMt" id="HYZ-3G-3Jg"/>
