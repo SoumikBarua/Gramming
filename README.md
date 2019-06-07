@@ -8,6 +8,8 @@ This app uses Firebase to run a simple social networking app. This app utilizes 
 
 ## App Walkthrough GIF
 
+This GIF show the app in action (Facebook and email sign-in options, updates to Firebase Auth and Firebase DB after sign-in, making a post with a caption, displaying the post in the UI, the post data being updated in Firebase DB and uploaded to Firebase Storage, making another post, liking posts, and signing out)
+
 ![Gramming Walkthrough](walkthrough.gif)
 
 ## Lessons Learned
