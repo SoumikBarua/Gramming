@@ -4,7 +4,7 @@ This is a simple iOS app for social networking.
 
 ## Getting Started
 
-This app uses Firebase to run a social networking app. This app utilizes Cocoapods to integrate Firebase SDK libraries. Firebase Authentication is used to allow users to sign-in using either Facebook or email login. Firebase Realtime Database is used to structure data used in the app and finally Firebase Storage is used to upload and download images.
+This app uses Firebase to run a simple social networking app. This app utilizes Cocoapods to integrate Firebase SDK libraries. Firebase Authentication is used to allow users to sign-in using either Facebook or email login. Firebase Realtime Database is used to structure data used in the app and finally Firebase Storage is used to upload and download images.
 
 ## App Walkthrough GIF
 
